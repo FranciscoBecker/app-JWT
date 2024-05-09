@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.findByLogin(login);
 
         if (user == null)
-            throw new IllegalArgumentException("não achei");
+            throw new IllegalArgumentException("usuário não encontrado");
         return user;
     }
 
